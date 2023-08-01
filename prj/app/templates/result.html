@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Result
+        </title>
+        <style>
+            table{
+                border:1px solid black; 
+            }
+            th,tr{
+                padding: 10px;
+            }
+            .jerry{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-40%,-40%);
+            }
+        </style>
+
+    </head>
+    <body>
+        <table class="jerry">
+            {% block content %}
+            <th colspan="2"><h3>View All</h3></th><hr>
+            <tr>
+                <th>name</th>
+                <td>{{Name}}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{Password}}</td>
+            </tr>    
+            <tr>
+                <th>Address</th>
+                <td>{{Address}}</td>
+            </tr> 
+            <tr>
+                <th>mail</th>
+                <td>{{Mail}}</td>
+            </tr>            
+        </table>
+         {% endblock %}
+    </body>
+</html>

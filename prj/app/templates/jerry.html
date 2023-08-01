@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>table</title>
+        <style>
+            table{
+                border:1px solid black; 
+            }
+            th,tr{
+                padding: 10px;
+            }
+            .align{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-40%,-40%);
+            }
+            th{
+                
+                text-align: right;
+
+            }
+          
+
+        </style>
+    </head>
+    <body>
+        {% block content %}
+        <form action="product" method="POST" >
+            {% csrf_token %}
+            <table class="align">
+              <tr> 
+                <center><th colspan="2" class="juju">REGISTRATION</th></center>
+            </tr>
+              <tr>
+                <th>Name </th>
+                <td><input type="text" name="Name"></td>
+              </tr>
+              <tr>
+                <th>Password</th>
+                <td><input type="text" name="Password"></td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td><input type="text" name="Address"></td>
+
+              </tr>
+              <tr>
+                <th>
+                    Mail
+                </th>
+                <td><input type="mail" name="Mail"></td>
+              </tr>
+              <tr>
+                <th colspan="2"><input type="submit" value="submit"></th>
+              </tr>
+            </table>
+        </form>
+        {% endblock %}
+    </body>
+</html>
